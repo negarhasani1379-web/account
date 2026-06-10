@@ -15,3 +15,12 @@ class CustomLoginView(LoginView):
 class CustomLogoutView(LogoutView):
     next_page = 'login'
 
+class CustomLoginView(LoginView):
+
+    template_name = 'accounts/login.html'
+
+
+class CustomLogoutView(LogoutView):
+
+    next_page = 'login'
+

@@ -11,7 +11,7 @@ class Person(models.Model):
         db_index=True
     )
 
-    phone_number = models.CharField(max_length=13,unique=True)
+    phone_number = models.CharField(max_length=13,unique=True,db_index=True)
 
     father_name = models.CharField(max_length=100)
 

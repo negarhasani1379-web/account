@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Search
+{% endblock %}
+
+{% block content %}
+
+<h2>Search Person</h2>
+
+<form method="get">
+
+    <input
+        type="text"
+        name="q"
+        placeholder="search..."
+    >
+
+    <button type="submit">
+        Search
+    </button>
+</form>
+<hr>
+
+{% for person in results %}
+    <p>
+        {{ person.first_name }}
+        {{ person.last_name }}
+    </p>
+    <p>
+        {{ person.national_code }}
+    </p>
+    <hr>
+
+{% empty %}
+
+    <p>No Result</p>
+
+{% endfor %}
+
+{% endblock %}

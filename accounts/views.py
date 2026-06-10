@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.views import (LoginView,LogoutView)
 from django.views.generic import CreateView
 from .forms import SignupForm
+from django.views.generic import TemplateView
 class SignupView(CreateView):
     model = User
     form_class = SignupForm
@@ -18,4 +19,6 @@ class CustomLoginView(LoginView):
     template_name = 'accounts/login.html'
 class CustomLogoutView(LogoutView):
     next_page = 'login'
+class HomeView(TemplateView):
+    template_name = 'home.html'
 

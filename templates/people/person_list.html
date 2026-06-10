@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+People
+{% endblock %}
+
+{% block content %}
+
+<h2>People List</h2>
+
+{% for person in object_list %}
+
+    <p>
+        {{ person.first_name }}
+        {{ person.last_name }}
+    </p>
+
+{% endfor %}
+
+{% endblock %}

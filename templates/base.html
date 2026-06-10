@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {% block title %}
+        National System
+        {% endblock %}
+    </title>
+</head>
+<body>
+
+    <h1>National Registration System</h1>
+    <hr>
+    <a href="{% url 'signup' %}">Signup</a>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'search' %}">Search</a>
+    <a href="{% url 'dashboard' %}">Dashboard</a>
+    <hr>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
